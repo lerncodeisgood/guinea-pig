@@ -1,0 +1,58 @@
+body, th, td, label, a, span {
+    font-family: Roboto, 'Segoe UI', 'Helvetica Neue', Frutiger,
+      'Frutiger Linotype', 'Dejavu Sans', 'Trebuchet MS', Verdana, Arial,
+      sans-serif;
+  }
+  
+  table.body {
+    font-size: 16px;
+    color: #212120;
+    max-width: 600px;
+  }
+  
+  table.body > tbody > tr > td:first-child {
+    width: 20px;
+  }
+  
+  a {
+    color: #03318D;
+  }
+  
+  table.btn {
+    background-color: #03318D;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 4px;
+  }
+  
+  table.btn a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  td.toast {
+    color: #03318D;
+    font-size: 28px;
+    font-weight: 500;
+  }
+  
+  td.logo {
+    height: 104px;
+    vertical-align: top;
+  }
+  
+  td.content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  strong.time {
+    color: #40A631;
+  }
+  
+  td.remark {
+    padding-left: 8px;
+    background-color: #ECF4FB;
+  }

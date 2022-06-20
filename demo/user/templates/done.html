@@ -1,0 +1,95 @@
+
+<!doctype html>
+{% load static %}
+{% load question_extra %}
+<head>
+<style>
+    @font-face {
+        font-family: handwritten;
+        src: url('{% static "Andika.ttf"%}')
+    }
+    .back{
+        background-image: url('{% static "birthday.jpeg"%}');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color:black;
+        font-family: handwritten;
+        }
+    form{
+           color: black;
+           border: none;
+           font-family: handwritten;
+           font-size: 2vw;
+           outline: none;
+           background-color:transparent;
+           text-align: center;
+           /* position: absolute;
+           top: 250px;
+           left: 450px; */
+           /* position:relative;
+           top: 100px;
+           left: 200px; */
+           
+        }
+        .content{
+           width:50%;
+           position: relative;
+           font-size: 200%;
+        }
+        .button{
+           color: gold;
+           font-size: 200%;
+        }
+        #keyin{
+           border-bottom: 2px solid white;
+         }
+        span{
+            color:red;
+        }
+        
+</style>
+{% if error %}
+    <script>alert ('{{message}}')</script> 
+{% endif %}
+
+
+<html>
+    <body class="back">      
+        
+
+        <div class='container'> 
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1 align="center">Done！</h1>  
+            <h1 align="center">你答對了<span>{{ correct_answer }}</span>/{{ total_question }}題！</h1>
+            <h1 align="center">快去信箱收信吧～</h1>
+            <div align="center">
+            {% for qnv in question_list %}
+            <label>答錯題目:{{qnv.caption}}</label> <br />
+            <label ><span>X:{{option_wrong_dict|get_value:qnv.caption }}</span></label> <br />
+            
+            <label >O:{{option_correct_dict|get_value:qnv.caption }}</label> <br />
+            
+            {% endfor %}
+            </div>
+            {% csrf_token %}
+                
+            
+            
+          </div>
+           
+    </body>
+</html>

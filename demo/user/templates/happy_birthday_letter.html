@@ -1,0 +1,42 @@
+{% load inlinecss %}
+{% load static %}
+{% inlinecss "templates/email_template.css" %}
+<table class="body" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="2" class="logo">
+        <img src='https://happy-birthday-verna.herokuapp.com/static/invitation_code.jpg' alt="qr-code" />
+      </td>
+    <tr>
+      <td colspan="2" class="toast">Dear {{ username }},</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="content">
+        耶，又是一年一度的生日，生日快樂！
+        <br />
+        希望妳還喜歡這個小小的生日禮物，不知道妳答對了多少題呢XD <br/>
+        就用這封Email當作兌換券，讓我改天請你吃個飯吧（或是看咒術迴戰）～ <br />
+        或許明年就可以變...maybe 28題？
+      </td>
+    </tr>
+    <tr>
+      <td></td>  
+      <td class="content">
+        好好把握時間探索這個奇妙的世界，開心的過每一天，做自己喜歡的事！
+        <br />
+        祝妳生日快樂～～～
+
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="content">
+        2022.02.28
+        <br />
+        by 舉手舉得很酸a仲嘉
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endinlinecss %}
