@@ -18,3 +18,7 @@ class CreateUserPayloadSerializer(Serializer):
         if User.objects.filter(email=data).exists():
             raise ValidationError(code=ErrorEnum.EMAIL_IS_EXISTS)
         return data
+    
+class UserLoginPayloadSerializer(Serializer):
+    email = CharField(required=True)
+    password = CharField(required=True)
