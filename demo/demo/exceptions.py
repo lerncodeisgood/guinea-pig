@@ -68,6 +68,8 @@ class ErrorEnum(Enum):
         ErrorWrapper(4000022, 'The payment failed')
     QUERY_PAYMENT_STATUS_FAILED = \
         ErrorWrapper(4000023, 'Query payment status failed')
+    USERNAME_IS_EXISTS = \
+        ErrorWrapper(4000024, 'Username is existed')
     LOGIN_REQUIRED = \
         ErrorWrapper(4010001, 'Login required')
     INVALID_TOKEN = \

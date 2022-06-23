@@ -11,12 +11,12 @@ class UserProfile(models.Model):
         User, on_delete=models.CASCADE, primary_key=True, related_name='profile')
     country = models.CharField(null=True, max_length=50)
     town = models.CharField(null=True, max_length=20)
-    birthday = models.DateTimeField(null=True)
-    gender = models.PositiveSmallIntegerField(null=True, choices=GENDER_CHOICE)
+    mobile_phone = models.CharField(null=True,max_length=20)
+    address = models.CharField(null=True,max_length=100)
     created_datetime = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated_datetime = models.DateTimeField(auto_now=True)
     class Meta:
-        app_label = 'users'
+        app_label = 'user'
 
     def __str__(self):
         return str(self.user)
