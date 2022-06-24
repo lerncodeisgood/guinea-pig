@@ -52,6 +52,7 @@ def user_login(request):
                 return HttpResponse(200)
             else:
                 return HttpResponse(401)
+        return HttpResponse(400)
             
         
         
