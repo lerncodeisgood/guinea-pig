@@ -17,7 +17,7 @@ def create_user(request):
         if form.is_valid():
             create_user_payload={}
             create_user_profile_payload={}
-            create_user_payload['username'] = form.cleaned_data['username']
+            create_user_payload['username'] = form.cleaned_data['email']
             create_user_payload['email'] = form.cleaned_data['email']
             create_user_payload['password'] = form.cleaned_data['password']
             create_user_profile_payload['country'] = form.cleaned_data['country']
