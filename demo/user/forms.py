@@ -9,3 +9,7 @@ class CreateUserPostForm(forms.Form):
     country = forms.CharField(required=False, max_length=50)
     town = forms.CharField(required=False, max_length=20)
     address = forms.CharField(required=False, max_length=100)
+
+class LoginPostForm(forms.Form):
+    email = forms.CharField(label='email',max_length=64,required=True)
+    password = password = forms.CharField(label='password',max_length=32,required=True)
